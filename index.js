@@ -25,3 +25,13 @@ $("#button").click(function () {
     var test = myExp.test("My first name is Adriana");
     alert(test);
 });
+
+/* Modifiers: are how we modify our pattern.
+i = case Insensitive. Or.."Ignore-case"
+g= global. It will find all matches and not stop at just one.
+*/
+var myExp = /JS/gi;
+$("#new").click(function () {
+    var test = myExp.test("This js will not be ignored because of modifier i.");
+    alert(test);
+});
