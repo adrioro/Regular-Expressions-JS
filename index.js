@@ -55,11 +55,14 @@ $("#match").click(function () {
     }
 });
 
+//g ALLOWS TO WATCH ALL THE CONTENT, INSTEAD OF ONLY ONE OCURRENCE.
+
+
 //To get the number of matches:
 
 var myExp = /string/g;
 $("#match2").click(function () {
-    var str = "This is my test to match the string.".match(myExp);
+    var str = "This is my test to match the string, string, string.".match(myExp);
     var matches = str.length;
     alert(matches);
 });
