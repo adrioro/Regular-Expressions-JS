@@ -38,8 +38,28 @@ $("#new").click(function () {
 
 //.text() method will give us true or false.
 //.replace() method will replace the pattern.
+//Replace: string.replace("string or expression(here myExp)", "replacement");
 var myExp = /sentence/gi;
 $("#replace").click(function () {
     var str = "This is my new sentence."
     document.getElementById("parag").innerHTML = str.replace(myExp, "string");
+});
+
+//.match() method.ALWAYS USE g (global)
+//To get the string match:
+var myExp = /string/g;
+$("#match").click(function () {
+    var str = "This is my test to match the string.".match(myExp);
+    for (v in str) {
+        alert(str[v]);
+    }
+});
+
+//To get the number of matches:
+
+var myExp = /string/g;
+$("#match2").click(function () {
+    var str = "This is my test to match the string.".match(myExp);
+    var matches = str.length;
+    alert(matches);
 });
