@@ -35,3 +35,11 @@ $("#new").click(function () {
     var test = myExp.test("This js will not be ignored because of modifier i.");
     alert(test);
 });
+
+//.text() method will give us true or false.
+//.replace() method will replace the pattern.
+var myExp = /sentence/gi;
+$("#replace").click(function () {
+    var str = "This is my new sentence."
+    document.getElementById("parag").innerHTML = str.replace(myExp, "string");
+});
